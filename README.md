@@ -1,16 +1,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
---
--- Database: `my_acurite`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mystation`
---
-
 CREATE TABLE IF NOT EXISTS `mystation` (
   `ID` int(11) NOT NULL,
   `DateTime` datetime NOT NULL COMMENT 'Date and Time of Readings',
@@ -43,14 +33,8 @@ CREATE TABLE IF NOT EXISTS `mystation` (
 INSERT INTO `mystation` (`ID`, `DateTime`, `TempOutCur`, `HumOutCur`, `PressCur`, `DewCur`, `HeatIdxCur`, `WindChillCur`, `TempInCur`, `HumInCur`, `WindSpeedCur`, `WindAvgSpeedCur`, `WindDirCur`, `WindDirCurEng`, `WindGust10`, `WindDirAvg10`, `WindDirAvg10Eng`, `RainRateCur`, `RainDay`, `RainYest`, `RainMonth`, `RainYear`) VALUES
 (1, '2015-02-12 22:00:00', '54.7', 78, '30.24', '48.0', '54.7', '54.7', '79.0', 40, '0.9', '0.0', 134, 'SE', '2.0', 142, 'SE', '0.00', '0.03', '0.01', '4.54', '10.12');
 
---
--- Indexes for table `mystation`
---
 ALTER TABLE `mystation`
   ADD PRIMARY KEY (`ID`);
 
---
--- AUTO_INCREMENT for table `mystation`
---
 ALTER TABLE `mystation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
